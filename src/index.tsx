@@ -107,25 +107,20 @@ function App() {
         <p>Tasks:</p>
         <br />
         <p>1. Update app to add ToDo Item only by pressing Submit Button</p>
+        <br />
         <p>
-          Currently submit action is assigned to in TodoInput but is not
-          working, Why?
+          2. Add new input field named label, when user puts any value in label
+          it should be displayed seperated by a colon(:)
         </p>
         <br />
         <p>
-          2. Add posibility to submit new labels(a new input box), labels will
-          be inserted into the second field, and will be displayed separated by
-          comma.
-        </p>
-        <br />
-        <p>
-          3. Labels can be entered in free mode, but on submit they should be
-          sanitized, are accepted only labels that corespond to [a-zA-Z][\w\d]+{" "}
+          3. Labels should only start with letters, use the below regex:
+          /^[a-zA-Z]\w+$/
         </p>
         <br />
         <p>
           4. Add a button that will export all labels into a JSON File ( Hint
-          use on click: simple vanilla JS ){" "}
+          use on click: simple vanilla JS )
         </p>
       </blockquote>
     </>
