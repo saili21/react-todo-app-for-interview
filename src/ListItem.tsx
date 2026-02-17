@@ -6,7 +6,7 @@ interface Props {
   onClick: () => void;
 }
 
-export default function ListItem({ title, label, completed, onClick }: Props) {
+export default function ListItem({ title, completed, onClick }: Props) {
   return (
     <li
       onClick={onClick}
@@ -15,7 +15,6 @@ export default function ListItem({ title, label, completed, onClick }: Props) {
       }}
     >
       <span>{title}&nbsp;</span>
-      <span>{label}</span>
     </li>
   );
 }

@@ -4,14 +4,9 @@ interface Props {
   titlePlaceholder: string;
   labelPlaceholder?: string;
   onSubmit: (text: string) => void;
-  onExport: () => void;
 }
 
-export default function TodoInput({
-  titlePlaceholder,
-  onSubmit,
-  onExport,
-}: Props) {
+export default function TodoInput({ titlePlaceholder, onSubmit }: Props) {
   const [text, setText] = useState("");
 
   return (

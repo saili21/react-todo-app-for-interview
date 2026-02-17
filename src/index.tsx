@@ -1,6 +1,6 @@
 import "./styles.css";
 import React, { useReducer, useState } from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import ListItem from "./ListItem";
 import TodoInput from "./TodoInput";
 import TodoFilter from "./TodoFilter";
@@ -9,7 +9,6 @@ type TodoItem = {
   title: string;
   completed: boolean;
   id: number;
-  label: string;
 };
 
 export type Filter = "all" | "completed" | "uncompleted";
@@ -82,7 +81,6 @@ function App() {
             <ListItem
               key={item.id}
               title={item.title}
-              label={item.label}
               completed={item.completed}
               onClick={() => {
                 dispatch({ type: "toggle", id: item.id });
@@ -134,6 +132,9 @@ function App() {
   );
 }
 
-const rootElement = document.querySelector("#root");
+const rootElement = document.getElementById("root");
 
-ReactDOM.render(<App />, rootElement);
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<App />);
+}
